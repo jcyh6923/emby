@@ -53,3 +53,8 @@ jobs:
         with:
           commit_message: "build: update *.mrs from *.list"
           file_pattern: "*.json *.mrs"
+
+      - name: Clean up intermediate JSON files
+        run: |
+          rm -f *-source.json
+
