@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "emby.list"
+      - "tiktok.list"
       - "scripts/**"
   workflow_dispatch: {}
 
@@ -19,14 +20,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Convert classical list -> sing-box ruleset source JSON
+      - name: Convert .list -> ruleset JSON
         run: |
-          python scripts/list2ruleset.py
-          test -f emby-source.json && head -n 20 emby-source.json || true
+          python scripts/list2ruleset.py emby tiktok || true
+          ls -l *.json || true
 
       - name: Download sing-box
         run: |
-          # 选一个稳定版本号；如需更新，改成最新版本即可
           VER="1.8.8"
           curl -L -o sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/download/v${VER}/sing-box-${VER}-linux-amd64.tar.gz
           tar -xzf sing-box.tar.gz
@@ -34,16 +34,22 @@ jobs:
           chmod +x ./sing-box
           ./sing-box version
 
-      - name: Compile to emby.mrs
+      - name: Compile emby.mrs (if source exists)
         run: |
-          ./sing-box rule-set compile \
-            --output emby.mrs \
-            --type domain \
-            emby-source.json
-          ls -lh emby.mrs
+          if [ -f emby-source.json ]; then
+            ./sing-box rule-set compile --output emby.mrs --type domain emby-source.json
+            ls -lh emby.mrs
+          fi
 
-      - name: Commit emby.mrs back to repo
+      - name: Compile tiktok.mrs (if source exists)
+        run: |
+          if [ -f tiktok-source.json ]; then
+            ./sing-box rule-set compile --output tiktok.mrs --type domain tiktok-source.json
+            ls -lh tiktok.mrs
+          fi
+
+      - name: Commit artifacts
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "build: update emby.mrs from emby.list"
-          file_pattern: "emby-source.json emby.mrs"
+          commit_message: "build: update *.mrs from *.list"
+          file_pattern: "*.json *.mrs"
