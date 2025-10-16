@@ -37,14 +37,14 @@ jobs:
       - name: Compile emby.mrs (if source exists)
         run: |
           if [ -f emby-source.json ]; then
-            ./sing-box rule-set compile --output emby.mrs --type domain emby-source.json
+            ./sing-box rule-set compile emby-source.json -o emby.mrs
             ls -lh emby.mrs
           fi
 
       - name: Compile tiktok.mrs (if source exists)
         run: |
           if [ -f tiktok-source.json ]; then
-            ./sing-box rule-set compile --output tiktok.mrs --type domain tiktok-source.json
+            ./sing-box rule-set compile tiktok-source.json -o tiktok.mrs
             ls -lh tiktok.mrs
           fi
 
