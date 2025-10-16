@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "media.nijigem.by"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "emby.media",
+        "emby.wtf",
+        "jmsuper.com",
+        "embyplus.org",
+        "mius.uk",
+        "023168.xyz",
+        "nanflix.net",
+        "free.28.al",
+        "hkjz.998903.xyz",
+        "ljby.998903.xyz",
+        "rbswyh.998903.xyz",
+        "xgyd.998903.xyz",
+        "sbjxd.xytx.dpdns.org",
+        "nsfw.oceancloud.asia",
+        "mooguu.xyz",
+        "mcjoker.xyz",
+        "nebula-media.org",
+        "vban.xyz",
+        "v50.su",
+        "3767483.xyz",
+        "cn2gias.uk",
+        "mjji.de",
+        "o808o.com",
+        "sexemby.com",
+        "emby.my"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "emby"
+      ]
+    }
+  ]
+}
