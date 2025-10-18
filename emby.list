@@ -1,8 +1,13 @@
 # Emby 基础分流规则
-DOMAIN-SUFFIX,emby.media,Emby
-DOMAIN-KEYWORD,emby,Emby
+# Official Emby domains
+DOMAIN-SUFFIX,emby.media
+DOMAIN-SUFFIX,mb3admin.com
+DOMAIN-SUFFIX,embyserver.media
+DOMAIN-KEYWORD,emby
 # 如果你有自建 Emby 域名，可以加在这里，例如：
-# DOMAIN,emby.example.com,Emby
+# DOMAIN,emby.example.com
+
+# Community Emby servers
 DOMAIN,media.nijigem.by
 DOMAIN-SUFFIX,emby.wtf
 DOMAIN-SUFFIX,jmsuper.com
