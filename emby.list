@@ -1,35 +1,35 @@
 # Emby 基础分流规则
 # Official Emby domains
-DOMAIN-SUFFIX,emby.media
-DOMAIN-SUFFIX,mb3admin.com
-DOMAIN-SUFFIX,embyserver.media
-DOMAIN-KEYWORD,emby
+emby.media
+mb3admin.com
+embyserver.media
+emby
 # 如果你有自建 Emby 域名，可以加在这里，例如：
-# DOMAIN,emby.example.com
+emby.example.com
 
 # Community Emby servers
-DOMAIN,media.nijigem.by
-DOMAIN-SUFFIX,emby.wtf
-DOMAIN-SUFFIX,jmsuper.com
-DOMAIN-SUFFIX,embyplus.org
-DOMAIN-SUFFIX,mius.uk
-DOMAIN-SUFFIX,023168.xyz
-DOMAIN-SUFFIX,nanflix.net
-DOMAIN-SUFFIX,free.28.al
-DOMAIN-SUFFIX,hkjz.998903.xyz
-DOMAIN-SUFFIX,ljby.998903.xyz
-DOMAIN-SUFFIX,rbswyh.998903.xyz
-DOMAIN-SUFFIX,xgyd.998903.xyz
-DOMAIN-SUFFIX,sbjxd.xytx.dpdns.org
-DOMAIN-SUFFIX,nsfw.oceancloud.asia
-DOMAIN-SUFFIX,mooguu.xyz
-DOMAIN-SUFFIX,mcjoker.xyz
-DOMAIN-SUFFIX,nebula-media.org
-DOMAIN-SUFFIX,vban.xyz
-DOMAIN-SUFFIX,v50.su
-DOMAIN-SUFFIX,3767483.xyz
-DOMAIN-SUFFIX,cn2gias.uk
-DOMAIN-SUFFIX,mjji.de
-DOMAIN-SUFFIX,o808o.com
-DOMAIN-SUFFIX,sexemby.com
-DOMAIN-SUFFIX,emby.my
+media.nijigem.by
+emby.wtf
+jmsuper.com
+embyplus.org
+mius.uk
+023168.xyz
+nanflix.net
+free.28.al
+hkjz.998903.xyz
+ljby.998903.xyz
+rbswyh.998903.xyz
+xgyd.998903.xyz
+sbjxd.xytx.dpdns.org
+nsfw.oceancloud.asia
+mooguu.xyz
+mcjoker.xyz
+nebula-media.org
+vban.xyz
+v50.su
+3767483.xyz
+cn2gias.uk
+mjji.de
+o808o.com
+sexemby.com
+emby.my
