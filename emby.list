@@ -3,7 +3,7 @@
 emby.media
 mb3admin.com
 embyserver.media
-emby
+DOMAIN-KEYWORD,emby
 # 如果你有自建 Emby 域名，可以加在这里，例如：
 emby.example.com
 
